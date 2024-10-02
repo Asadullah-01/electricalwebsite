@@ -1,0 +1,96 @@
+.our-services-section-unique {
+    background-color: #f0f0f0;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.services-title-unique {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.services-container-unique {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.service-card-unique {
+    background-color: #ffffff;
+    border: 2px solid #2c3e50;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 200px;
+    position: relative;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .service-card-unique {
+        width: 150px; /* Smaller width for tablets */
+    }
+
+    .services-title-unique {
+        font-size: 28px; /* Slightly smaller title */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card-unique {
+        width: 100%; /* Full width on mobile */
+        max-width: 300px; /* Max width for better usability */
+    }
+
+    .services-title-unique {
+        font-size: 24px; /* Even smaller title for mobile */
+    }
+
+    .services-container-unique {
+        flex-direction: column; /* Stack services vertically on mobile */
+        align-items: center; /* Center align */
+    }
+}
+
+.service-card-unique:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card-unique h3 {
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+.service-card-unique p {
+    font-size: 16px;
+    color: #34495e;
+}
+
+.service-icon-unique {
+    font-size: 40px;
+    color: #e74c3c;
+    position: absolute;
+    top: -20px;
+    left: calc(50% - 20px);
+}
+
+.explore-button-unique {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.explore-button-unique:hover {
+    background-color: #c0392b;
+}

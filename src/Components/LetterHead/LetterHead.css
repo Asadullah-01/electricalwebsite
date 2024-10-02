@@ -1,0 +1,84 @@
+.letterhead-section {
+    background-color: #f0f0f0; /* Same light background for consistency */
+    padding: 20px; /* Slimmer padding */
+    text-align: center; /* Center content */
+    border: 2px solid #2c3e50; /* Dark border for a professional look */
+    border-radius: 8px; /* Rounded corners */
+    max-width: 600px; /* Width control for the letterhead */
+    margin: 0 auto 20px auto; /* Center it horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Title styling */
+.letterhead-title {
+    font-size: 24px; /* Reduced font size */
+    font-weight: bold;
+    color: #2c3e50; /* Darker text color */
+    margin-bottom: 15px;
+}
+
+/* Input field styling */
+.letterhead-input {
+    width: 80%; /* Increased width for input */
+    padding: 10px; /* Input padding for a slim, clean design */
+    border: 2px solid #2c3e50; /* Consistent with card border */
+    border-radius: 5px; /* Rounded input */
+    font-size: 16px; /* Text size */
+    margin-bottom: 20px; /* Space below input */
+}
+
+/* Button styling */
+.letterhead-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e74c3c; /* Bright button color */
+    color: white; /* White text */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Button hover effect */
+.letterhead-button:hover {
+    background-color: #c0392b; /* Darker on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .letterhead-section {
+        padding: 15px; /* Adjust padding for smaller screens */
+        margin: 0 10px; /* Add side margins */
+        max-width: 90%; /* Increase max-width for mobile */
+    }
+
+    .letterhead-title {
+        font-size: 20px; /* Smaller font size for title */
+    }
+
+    .letterhead-input {
+        width: 90%; /* Increase width for input on mobile */
+        font-size: 14px; /* Smaller text size for input */
+    }
+
+    .letterhead-button {
+        padding: 8px 16px; /* Smaller button size */
+    }
+}
+
+@media (max-width: 480px) {
+    .letterhead-title {
+        font-size: 18px; /* Even smaller font size for smaller screens */
+    }
+
+    .letterhead-input {
+        font-size: 12px; /* Smaller text size for very small devices */
+    }
+
+    .letterhead-button {
+        padding: 6px 12px; /* Adjust button padding */
+    }
+}

@@ -1,0 +1,194 @@
+/* General Contact Us Styling */
+.contact-us {
+    position: relative;
+    background-image: url('../../Assets/contactus.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    color: white;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    z-index: 1;
+}
+
+.contact-us::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Black overlay with opacity */
+    z-index: -1;
+}
+
+/* Contact Header Styling */
+.contact-header h1 {
+    font-size: 42px; /* Reduced slightly for a clean look */
+    color: #e74c3c; /* Accent Orange */
+    margin-bottom: 10px;
+}
+
+.contact-header p {
+    font-size: 16px; /* Slightly smaller font size for a clean look */
+    line-height: 1.6; /* Increased line-height for better readability */
+    max-width: 800px; /* Limiting the width for better alignment */
+    margin: 0 auto 20px auto; /* Centering and spacing */
+    color: #f0f0f0; /* Softer white for better contrast */
+}
+
+/* Contact Info Section */
+.contact-info {
+    text-align: center; /* Center the text */
+    margin: 20px auto;
+    /* Center with auto margins */
+}
+
+.contact-info h2 {
+    color: #0077b6; /* Primary Blue */
+    font-size: 24px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    color: white;
+    z-index: 2;
+}
+
+/* Spacing between info and form */
+.contact-content {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form Container Styling */
+.form-container {
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px; /* Reduced padding for a smaller form */
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 650px; /* Reduced form width for a compact design */
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form h2 {
+    color: #252525;
+    margin-bottom: 20px;
+}
+
+/* Form Input and Textarea */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px; /* Reduced padding */
+    margin-bottom: 15px; /* Reduced margin */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 120px; /* Reduced height of the textarea */
+}
+
+/* Button Styling */
+.contact-form button {
+    padding: 12px 25px; /* Reduced button size */
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #c0392b; /* Darker Orange */
+}
+
+/* Footer Banner */
+.footer-banner {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+/* Select Dropdown Styling */
+.contact-form select {
+    width: 100%; /* Adjusted to fit full width */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    color: #252525;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .contact-us {
+        padding: 30px; /* Reduced padding for smaller screens */
+    }
+
+    .contact-header h1 {
+        font-size: 32px; /* Smaller heading */
+    }
+
+    .contact-header p {
+        font-size: 14px; /* Smaller paragraph text */
+    }
+
+    .form-container {
+        padding: 20px; /* Smaller padding */
+    }
+
+    .contact-form h2 {
+        font-size: 20px; /* Smaller heading in the form */
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 10px; /* Smaller padding */
+    }
+
+    .contact-form button {
+        padding: 10px 20px; /* Smaller button */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-header h1 {
+        font-size: 28px; /* Smaller heading for mobile */
+    }
+
+    .contact-header p {
+        font-size: 12px; /* Smaller paragraph text */
+    }
+
+    .form-container {
+        margin: 20px 0; /* Margin adjustments */
+        max-width: 100%; /* Full width on mobile */
+    }
+
+    .contact-form h2 {
+        font-size: 18px; /* Smaller heading in the form */
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 8px; /* Even smaller padding */
+    }
+
+    .contact-form button {
+        padding: 8px 16px; /* Smaller button */
+    }
+}

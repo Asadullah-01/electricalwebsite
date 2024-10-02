@@ -1,0 +1,158 @@
+.services-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* Ensure nothing overflows the main container */
+}
+
+/* Shared Styles for Service Sections */
+.service-section {
+    width: 100%;
+    padding: 80px 20px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Prevent content from overflowing */
+    box-sizing: border-box;
+}
+
+/* Fabrication Services Section */
+.fabrication-services {
+    background-image: url('../../Assets/fab.jpg');
+}
+
+/* Industrial Services Section */
+.industrial-services {
+    background-image: url('../../Assets/industry.jpg');
+}
+
+/* Technical Services Section */
+.technical-services {
+    background-image: url('../../Assets/general.jpg');
+}
+
+/* Overlay for background images */
+.service-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Lighter overlay for better visibility */
+    z-index: 1;
+}
+
+/* Service Title */
+.service-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+/* Service Items */
+.service-items {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.service-item {
+    background-color: rgba(0, 0, 0, 0.6); /* Darker background for better readability */
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+}
+
+.service-item:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.service-icon-m {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #ff6f61; /* Brighter icon color */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); /* Shadow for better visibility */
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #ddd;
+}
+
+/* Ensure background images stay within section bounds */
+.service-section {
+    min-height: 80vh; /* Adjust the height of the sections */
+    background-attachment: fixed; /* Keep the background fixed in position for a parallax effect */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .service-title {
+        font-size: 28px; /* Smaller title size for tablets */
+        margin-bottom: 30px; /* Adjust margin */
+    }
+
+    .service-item {
+        width: 200px; /* Adjust width for tablets */
+        padding: 15px; /* Smaller padding */
+    }
+
+    .service-item h3 {
+        font-size: 20px; /* Smaller heading */
+    }
+
+    .service-item p {
+        font-size: 14px; /* Smaller paragraph */
+    }
+
+    .service-items {
+        gap: 20px; /* Reduce gap */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-title {
+        font-size: 24px; /* Smaller title size for mobile */
+        margin-bottom: 20px; /* Adjust margin */
+    }
+
+    .service-item {
+        width: 100%; /* Full width for mobile */
+        max-width: 300px; /* Limit width for better appearance */
+        padding: 10px; /* Smaller padding */
+    }
+
+    .service-item h3 {
+        font-size: 18px; /* Smaller heading */
+    }
+
+    .service-item p {
+        font-size: 12px; /* Smaller paragraph */
+    }
+
+    .service-items {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+}

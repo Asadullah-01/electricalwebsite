@@ -1,0 +1,259 @@
+/* About Us Header */
+.about-us-header {
+    height: 40vh;
+    background-image: url('../../Assets/contactus.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3vw; /* Responsive font size */
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(0, 102, 204, 0.8); /* Adjusted blue overlay for better readability */
+}
+
+/* Company History Section */
+.about-us-history {
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto; /* Added margin for spacing */
+    background-color: #f0f0f0; /* Softer grey */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* History Heading */
+.about-us-history h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #e74c3c; /* A softer, warmer orange */
+}
+
+/* Mission and Vision Section */
+.about-us-mission-vision {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px; /* Add spacing between columns */
+}
+
+.mission, .vision {
+    width: 45%;
+    background-color: #004a99; /* A darker blue */
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.mission h2, .vision h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.mission p, .vision p {
+    font-size: 18px;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    height: 80vh;
+    background-image: url('../../Assets/contactus.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+.why-choose-us::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Updated grid for choice-box */
+.why-choose-us h1{
+    color: white;
+    z-index: 2;
+}
+.choice-box {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Two columns */
+    gap: 20px; /* Space between items */
+    z-index: 2;
+}
+
+.choice-item {
+    background-color: rgba(231, 76, 30, 0.8); /* Softer orange with more opacity */
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle depth */
+    text-align: center; /* Center text in each item */
+}
+
+/* Our Services Section */
+.our-services-section-unique {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services-title-unique {
+    font-size: 36px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 40px;
+}
+
+.services-container-unique {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.service-card-unique {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 280px;
+    position: relative;
+    text-align: left;
+}
+
+.service-card-unique:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-card-unique h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.service-card-unique p {
+    font-size: 16px;
+    color: #34495e;
+}
+
+.service-icon-unique {
+    font-size: 36px;
+    color: #e74c3c;
+    position: absolute;
+    top: -20px;
+    left: calc(50% - 18px);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.explore-button-unique {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 24px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.explore-button-unique:hover {
+    background-color: #c0392b;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .about-us-header {
+        font-size: 6vw; /* Adjusted font size for medium screens */
+    }
+
+    .mission, .vision {
+        width: 100%; /* Stack columns on smaller screens */
+    }
+
+    .about-us-mission-vision {
+        flex-direction: column; /* Stack sections vertically */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us-header {
+        font-size: 5vw; /* Further adjustment for smaller screens */
+    }
+
+    .about-us-history {
+        padding: 15px; /* Reduced padding */
+        font-size: 16px; /* Smaller font size */
+    }
+
+    .choice-box {
+        flex-direction: column; /* Stack choice items */
+        align-items: center; /* Center choice items */
+    }
+
+    .choice-item {
+        font-size: 16px; /* Adjust font size */
+        width: 100%; /* Full width */
+    }
+
+    .services-title-unique {
+        font-size: 28px; /* Reduced title size */
+    }
+
+    .service-card-unique {
+        width: 90%; /* Full width on smaller screens */
+        margin: 0 auto; /* Center card */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us-header {
+        font-size: 4vw; /* Smaller font size for mobile */
+    }
+
+    .about-us-history h2 {
+        font-size: 24px; /* Adjust heading size */
+    }
+
+    .mission h2, .vision h2 {
+        font-size: 24px; /* Smaller heading size */
+    }
+
+    .choice-item {
+        font-size: 14px; /* Smaller font size for choice items */
+    }
+
+    .services-title-unique {
+        font-size: 24px; /* Smaller title size */
+    }
+
+    .service-card-unique {
+        padding: 20px; /* Reduced padding */
+    }
+}

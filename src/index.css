@@ -1,0 +1,23 @@
+/* Global font setup */
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Example of adjusting font weights */
+h1, h2, h3 {
+  font-weight: 700; /* Bold headings */
+}
+
+p, a, li {
+  font-weight: 400; /* Normal body text */
+}
+
+button {
+  font-weight: 500; /* Medium for buttons */
+}
+html{
+  scroll-behavior: smooth;
+}
+[data-aos] {
+  will-change: transform, opacity; /* Optimize for transform and opacity changes */
+}

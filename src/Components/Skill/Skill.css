@@ -1,0 +1,73 @@
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.skills-container hr {
+    width: 60%;
+    height: 2px;
+    margin-bottom: 50px;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /*grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));*/
+    gap: 20px;
+
+}
+
+.skill-box {
+    background-color: #1c1c1c;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    width: 250px;
+
+}
+
+.skill-box:hover {
+    transform: scale(1.05);
+}
+.skill-icon{
+    font-size: 40px; /* Controls the size of the icon */
+    margin-bottom: 10px;
+}
+
+/* Animation Keyframes */
+@keyframes icon-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes icon-scale {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+/* Initial Icon Style */
+.skill-icon {
+    transition: transform 0.5s ease, color 0.5s ease; /* Smooth transition for scaling and color */
+    color: #333; /* Initial color */
+}
+
+/* Hover Effect on the Card */
+.skill-box:hover .skill-icon {
+    animation: icon-rotate 0.5s ease, icon-scale 0.5s ease;
+    color: #4285F4; /* Color change on hover */
+}

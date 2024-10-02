@@ -1,0 +1,121 @@
+/* Main footer container */
+.footer {
+    background-color: #252525;
+    color: #f1f1f1;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    animation: fadeInUp 1s ease-in-out; /* Smooth fade-in on page load */
+}
+
+/* Flex layout for logo and links */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Logo and title styling */
+.footer-logo-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-icon {
+    font-size: 40px;
+    color: #0077b6; /* Primary blue */
+    transition: transform 0.3s ease; /* Animation for icon */
+}
+
+.footer-icon:hover {
+    transform: scale(1.1); /* Slight scaling on hover */
+}
+
+.footer-title p {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Links styling */
+.footer-links-container {
+    display: flex;
+    gap: 50px;
+}
+
+.footer-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.footer-links li {
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links li:hover {
+    color: #e74c3c; /* Accent color on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Bottom section for copyright */
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 20px;
+}
+
+.footer-bottom hr {
+    border: none;
+    height: 2px;
+    background-color: #0077b6; /* Primary blue */
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Responsive styles */
+@media (max-width: 800px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-title p {
+        font-size: 16px;
+    }
+
+    .footer-icon {
+        font-size: 30px;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

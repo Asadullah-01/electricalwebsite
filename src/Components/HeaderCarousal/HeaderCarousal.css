@@ -1,0 +1,116 @@
+.header-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.header-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 0 20px; /* Added padding for small screens */
+}
+
+.header-content h1 {
+    font-size: 3rem; /* Responsive font size */
+    font-weight: bold;
+}
+
+.header-content p {
+    font-size: 1.25rem; /* Responsive font size */
+    margin: 20px 0;
+}
+
+.cta-button {
+    padding: 12px 24px;
+    background-color: #ff6b35;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 1rem; /* Responsive font size */
+}
+
+.cta-button:hover {
+    background-color: #f15b24;
+}
+
+.nav-buttons {
+    position: absolute;
+    bottom: 20px; /* Position buttons at the bottom */
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+}
+
+.nav-button {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2.5rem; /* Smaller font size for tablets */
+    }
+
+    .header-content p {
+        font-size: 1rem; /* Smaller font size for tablets */
+    }
+
+    .cta-button {
+        padding: 10px 20px; /* Adjusted button size for smaller screens */
+    }
+
+    .nav-button {
+        padding: 8px; /* Adjusted padding for nav buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 2rem; /* Smaller font size for mobile phones */
+    }
+
+    .header-content p {
+        font-size: 0.875rem; /* Smaller font size for mobile phones */
+    }
+
+    .cta-button {
+        padding: 8px 16px; /* Further adjusted button size for mobile screens */
+    }
+
+    .nav-button {
+        padding: 6px; /* Further adjusted padding for nav buttons */
+    }
+}

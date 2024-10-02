@@ -1,0 +1,122 @@
+.our-clients {
+    background-color: #f5f5f5;
+    padding: 40px;
+    text-align: center;
+}
+
+.our-clients h2 {
+    color: #e74c3c;
+    margin-bottom: 20px;
+    font-size: 2.5rem; /* Use rem for better scaling */
+}
+
+.clients-scroll-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    position: relative;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    white-space: nowrap; /* Prevent wrapping */
+    scroll-behavior: smooth; /* Optional: smooth scrolling */
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.clients-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.client-item {
+    position: relative;
+    margin: 0 10px; /* Spacing between client items */
+    transition: transform 0.3s ease;
+}
+
+/* Set default width and height for client images */
+.client-image {
+    width: 200px; /* Set desired width */
+    height: 300px; /* Increased height */
+    object-fit: cover; /* Ensure the image covers the div without stretching */
+    border-radius: 10px; /* Optional: to give rounded corners */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth hover effect */
+    filter: brightness(50%); /* Make the image dull by default */
+}
+
+/* Hover effect to scale the image and make it brighter */
+.client-item:hover .client-image {
+    transform: scale(1.05); /* Scale the item slightly on hover */
+    filter: brightness(100%); /* Make the image brighter on hover */
+}
+
+/* Make the client name always visible on the image */
+.client-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+    opacity: 1; /* Always visible */
+    transition: opacity 0.3s ease;
+    text-align: center; /* Center the text horizontally */
+    width: 100%; /* Ensure the text container takes the full width of the image */
+    word-wrap: break-word; /* Allow long words to break */
+    white-space: normal; /* Allow text to wrap to the next line */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .client-image {
+        width: 180px; /* Slightly smaller on medium screens */
+        height: 270px; /* Adjust height accordingly */
+    }
+}
+
+@media (max-width: 992px) {
+    .client-image {
+        width: 150px; /* Smaller on small screens */
+        height: 220px; /* Adjust height accordingly */
+    }
+
+    .clients-scroll-container {
+        padding: 0 10px; /* Add some padding to the container */
+    }
+
+    .client-name {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .client-image {
+        width: 120px; /* Smaller on mobile screens */
+        height: 180px; /* Adjust height accordingly */
+    }
+
+    .our-clients h2 {
+        font-size: 2rem; /* Adjust heading size for mobile */
+    }
+
+    .client-name {
+        font-size: 0.9em; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .our-clients {
+        padding: 20px; /* Reduce padding for mobile */
+    }
+
+    .client-image {
+        width: 100px; /* Smallest on very small screens */
+        height: 150px; /* Adjust height accordingly */
+    }
+
+    .our-clients h2 {
+        font-size: 1.5rem; /* Further reduce heading size */
+    }
+
+    .client-name {
+        font-size: 0.8em; /* Further adjust font size */
+    }
+}

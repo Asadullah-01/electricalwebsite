@@ -1,0 +1,135 @@
+.NavBar {
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    z-index: 1000; /* Ensures dropdown stays above content */
+}
+
+/* Top Bar */
+.top-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 600px;
+    padding: 5px 20px;
+    background-color: #f8f9fa; /* Light gray for a clean look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo h1 {
+    color: #0077b6; /* Primary Blue */
+    font-size: 20px; /* Reduced font size for a sleek look */
+    margin: 0;
+}
+
+.contact-info {
+    display: flex; /* Flex container for contact info */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Space between phone info and button */
+}
+
+.phone-info {
+    display: flex;
+    align-items: center;
+    color: #252525; /* Dark color */
+}
+
+.phone-icon {
+    color: #e74c3c;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.contact-button {
+    padding: 8px 16px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #c0392b;
+}
+
+/* Bottom Bar */
+.bottom-bar {
+    background-color: #252525;
+    padding: 15px 20px;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.nav-items a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-items a:hover {
+    color: #0077b6; /* Primary Blue for hover */
+}
+
+.services-dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 180px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1001; /* Keep the dropdown above everything */
+}
+
+.dropdown-content a {
+    color: #252525;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+
+
+    .bottom-bar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo h1 {
+        font-size: 18px;
+    }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
